@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -14,6 +15,7 @@ import util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Optional;
 
 public class StudentFormController {
     public TableView<Student> tblStudent;
@@ -86,6 +88,23 @@ public class StudentFormController {
     }
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are You Sure?", ButtonType.YES, ButtonType.NO);
+        Optional<ButtonType> buttonType = alert.showAndWait();
+        if (buttonType.get().equals(ButtonType.YES)) {
+            try {
+                CrudUtil.execute("DELETE FROM Student WHERE student_id=?", txtStudentID.getText());
+                loadAllStudent();
+                btnSave.setText("Add+");
+                clearTextField();
+                tblStudent.refresh();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            } catch (ClassNotFoundException classNotFoundException) {
+                classNotFoundException.printStackTrace();
+            }
+        }
+        tblStudent.refresh();
+
     }
 
     public void btnSaveOnAction(ActionEvent actionEvent) {
