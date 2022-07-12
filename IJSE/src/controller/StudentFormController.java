@@ -62,7 +62,7 @@ public class StudentFormController {
         txtStudentID.setText(newValue.getStudent_id());
         txtStudentName.setText(newValue.getStudent_name());
         txtEmail.setText(newValue.getEmail());
-        txtContact.setText(newValue.getEmail());
+        txtContact.setText(newValue.getContact());
         txtAddress.setText(newValue.getAddress());
         txtNIC.setText(newValue.getNic());
     }
@@ -93,10 +93,11 @@ public class StudentFormController {
         if (buttonType.get().equals(ButtonType.YES)) {
             try {
                 CrudUtil.execute("DELETE FROM Student WHERE student_id=?", txtStudentID.getText());
-                loadAllStudent();
-                btnSave.setText("Add+");
-                clearTextField();
                 tblStudent.refresh();
+                loadAllStudent();
+                btnSave.setText("Save");
+                clearTextField();
+
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             } catch (ClassNotFoundException classNotFoundException) {

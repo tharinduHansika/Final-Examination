@@ -71,5 +71,51 @@ CREATE TABLE IF NOT EXISTS Payment(
 );
 
 
+#------------------------------------Sample Data----------------------------------------------------------------------
+
+INSERT INTO Student VALUES ('S001','Tharindu','tharindu@gmail.com','0711404011','Matara','990711569v');
+INSERT INTO Student VALUES ('S002','Thulitha','thulitha@gmail.com','0771808011','Galle','200711569v');
+INSERT INTO Student VALUES ('S003','Nadun','nadun@gmail.com','0761681414','Panadura','980711569v');
+INSERT INTO Student VALUES ('S004','Gihan','gihan@gmail.com','0782404011','Kandy','990755569v');
+INSERT INTO Student VALUES ('S005','Chamika','chamika@gmail.com','0722404022','Colombo','200722569v');
+
+INSERT INTO Teacher VALUES ('T001','Hasika','961245783v','0711591145','Panadura');
+INSERT INTO Teacher VALUES ('T002','Yasindu','979658783v','0711591146','Kalutara');
+INSERT INTO Teacher VALUES ('T003','Danuja','001244536v','0711591147','Elpitiya');
+INSERT INTO Teacher VALUES ('T004','Sanu','938569283v','0711591148','Galle');
+INSERT INTO Teacher VALUES ('T005','Ishanka','948561383v','0711591149','Panadura');
+
+INSERT INTO Subject VALUES ('SUB001','PRF',100,'T001');
+INSERT INTO Subject VALUES ('SUB002','DBMS',100,'T002');
+INSERT INTO Subject VALUES ('SUB003','ORM',100,'T003');
+INSERT INTO Subject VALUES ('SUB004','IT',100,'T004');
+INSERT INTO Subject VALUES ('SUB005','SE',100,'T005');
+
+INSERT INTO Course VALUES ('C001','GDSE',320000,'2 year','SUB001');
+INSERT INTO Course VALUES ('C002','CMJD',220000,'1 year','SUB002');
+INSERT INTO Course VALUES ('C003','DEP',120000,'1.5 year','SUB003');
+INSERT INTO Course VALUES ('C004','RMAD',80000,'4 month','SUB005');
+INSERT INTO Course VALUES ('C005','RWD',60000,'3 monh','SUB004');
+
+INSERT INTO Intake VALUES ('I001','2022-07-15','ABC','FOR GDSE','C001');
+INSERT INTO Intake VALUES ('I002','2022-08-15','DEF','FOR CMJD','C002');
+INSERT INTO Intake VALUES ('I003','2022-09-15','GHI','FOR DEP','C003');
+INSERT INTO Intake VALUES ('I004','2022-10-15','JKL','FOR RMAD','C004');
+INSERT INTO Intake VALUES ('I005','2022-11-15','MNO','FOR RWD','C005');
+
+INSERT INTO Registration VALUES ('R001','2022-07-14','S001','I001');
+INSERT INTO Registration VALUES ('R002','2022-08-14','S002','I002');
+INSERT INTO Registration VALUES ('R003','2022-09-14','S003','I003');
+INSERT INTO Registration VALUES ('R004','2022-10-14','S004','I004');
+INSERT INTO Registration VALUES ('R005','2022-11-14','S005','I005');
+
+INSERT INTO Payment VALUES ('P001','2022-07-14',40000,'R001');
+INSERT INTO Payment VALUES ('P002','2022-08-14',30000,'R002');
+INSERT INTO Payment VALUES ('P003','2022-09-14',20000,'R003');
+INSERT INTO Payment VALUES ('P004','2022-10-14',10000,'R004');
+INSERT INTO Payment VALUES ('P005','2022-11-14',7000,'R005');
+
+
+
 
 
