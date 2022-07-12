@@ -18,24 +18,24 @@
          </font>
       </Label>
       <Label layoutX="509.0" layoutY="75.0" text="Basic CRUD Operations of Student" />
-      <TableView layoutX="18.0" layoutY="237.0" prefHeight="529.0" prefWidth="1165.0">
+      <TableView fx:id="tblStudent" layoutX="18.0" layoutY="237.0" prefHeight="529.0" prefWidth="1165.0">
         <columns>
-          <TableColumn prefWidth="104.0" text="Student ID" />
-          <TableColumn prefWidth="328.0" text="Student Name" />
-            <TableColumn prefWidth="234.0" text="Email" />
-            <TableColumn prefWidth="148.0" text="Contact" />
-            <TableColumn prefWidth="210.0" text="Address" />
-            <TableColumn prefWidth="140.0" text="NIC" />
+          <TableColumn fx:id="colStudentID" prefWidth="104.0" text="Student ID" />
+          <TableColumn fx:id="colStudentName" prefWidth="328.0" text="Student Name" />
+            <TableColumn fx:id="colEmail" prefWidth="234.0" text="Email" />
+            <TableColumn fx:id="colContact" prefWidth="148.0" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="210.0" text="Address" />
+            <TableColumn fx:id="colNIC" prefWidth="140.0" text="NIC" />
         </columns>
       </TableView>
-      <JFXButton layoutX="612.0" layoutY="196.0" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #e74c3c;" text="Detete" textFill="WHITE" />
-      <JFXButton layoutX="472.0" layoutY="196.0" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #2ecc71;" text="Save" textFill="WHITE" />
+      <JFXButton fx:id="btnDelete" layoutX="612.0" layoutY="196.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #e74c3c;" text="Detete" textFill="WHITE" />
+      <JFXButton fx:id="btnSave" layoutX="472.0" layoutY="196.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #2ecc71;" text="Save" textFill="WHITE" />
       <Separator layoutX="18.0" layoutY="103.0" prefHeight="0.0" prefWidth="1165.0" />
-      <JFXTextField layoutX="18.0" layoutY="131.0" prefHeight="25.0" prefWidth="121.0" promptText="Student ID" />
-      <JFXTextField layoutX="173.0" layoutY="131.0" prefHeight="25.0" prefWidth="173.0" promptText="Student Name" />
-      <JFXTextField layoutX="379.0" layoutY="131.0" prefHeight="25.0" prefWidth="211.0" promptText="Email" />
-      <JFXTextField layoutX="620.0" layoutY="131.0" prefHeight="25.0" prefWidth="201.0" promptText="Contact" />
-      <JFXTextField layoutX="851.0" layoutY="131.0" prefHeight="25.0" prefWidth="181.0" promptText="Address" />
-      <JFXTextField layoutX="1055.0" layoutY="131.0" prefHeight="25.0" prefWidth="128.0" promptText="NIC" />
+      <JFXTextField fx:id="txtStudentID" layoutX="18.0" layoutY="131.0" prefHeight="25.0" prefWidth="121.0" promptText="Student ID" />
+      <JFXTextField fx:id="txtStudentName" layoutX="173.0" layoutY="131.0" prefHeight="25.0" prefWidth="173.0" promptText="Student Name" />
+      <JFXTextField fx:id="txtEmail" layoutX="379.0" layoutY="131.0" prefHeight="25.0" prefWidth="211.0" promptText="Email" />
+      <JFXTextField fx:id="txtContact" layoutX="620.0" layoutY="131.0" prefHeight="25.0" prefWidth="201.0" promptText="Contact" />
+      <JFXTextField fx:id="txtAddress" layoutX="851.0" layoutY="131.0" prefHeight="25.0" prefWidth="181.0" promptText="Address" />
+      <JFXTextField fx:id="txtNIC" layoutX="1055.0" layoutY="131.0" prefHeight="25.0" prefWidth="128.0" promptText="NIC" />
    </children>
 </AnchorPane>
